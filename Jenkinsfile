@@ -1,8 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'cytopia/yamllint'
-            args '-v $WORKSPACE:/data --entrypoint=/bin/ash'
+            image 'sdesbure/yamllint'
         }
     }
     stages {
