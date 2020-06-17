@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Linter') {
             steps {
-                sh 'yamllint .'
+                sh 'yamllint --no-warnings .'
             }
         }
     }
