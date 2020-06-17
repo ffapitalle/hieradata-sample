@@ -1,7 +1,8 @@
 pipeline {
     agent {
-        docker {
-            image 'sdesbure/yamllint'
+        dockerfile {
+            filename 'Dockerfile.build'
+            args '-v $WORKSPACE:/yaml'
         }
     }
     stages {
