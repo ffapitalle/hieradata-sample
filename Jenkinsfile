@@ -7,7 +7,9 @@ pipeline {
     }
     stages {
         stage('Linter') {
-            sh 'yamllint .'
+            steps {
+                sh 'yamllint .'
+            }
         }
     }
 }
